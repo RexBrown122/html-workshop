@@ -7,7 +7,22 @@
  *  - Player can turn turnover 1 card at a time
  *  - Only 2 cards can be face-up at once.
  */
-window.onload = function() {
+ var images = document.querySelectorAll("img");
+ var selectedNum = 0;
 
+window.onload = function() {
+    
 }
 
+function select(n) {
+    selectedNum++;
+    if (selectedNum < 3) {
+        images[n].style.filter = "brightness(100%)";
+    }
+    else {
+        for (let i = 0; i < images.length; i++) {
+            images[i].style.filter = "brightness(0%)";
+        }
+        selectedNum = 0;
+    }
+}

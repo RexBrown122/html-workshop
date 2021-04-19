@@ -7,19 +7,19 @@
  * OPTIONAL: Make the slideshow automatically play a new image every 3 seconds.
  */
  var slideIndex = 1;
- showSlides(slideIndex);
+//  showSlides(slideIndex);
  
  // Next/previous controls
- function plusSlides(n) {
+ const plusSlides = (n) => {
    showSlides(slideIndex += n);
  }
  
  // Thumbnail image controls
- function currentSlide(n) {
+ const currentSlide = (n) => {
    showSlides(slideIndex = n);
  }
  
- function showSlides(n) {
+ const showSlides = (n) => {
    var i;
    var slides = document.getElementsByClassName("mySlides");
    var dots = document.getElementsByClassName("dot");
@@ -42,3 +42,5 @@
    slides[slideIndex-1].style.display = "block";
    dots[slideIndex-1].className += " active";
  }
+
+ showSlides(slideIndex);

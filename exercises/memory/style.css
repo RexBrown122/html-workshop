@@ -77,6 +77,10 @@ body {
 	cursor: cell;
 }
 
+img {
+	filter: brightness(0%);
+}
+
 button {
 	width: 100px;
 	height: 50px;
